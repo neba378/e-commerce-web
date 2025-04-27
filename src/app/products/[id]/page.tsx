@@ -50,7 +50,7 @@ const ProductDetailPage = () => {
       const fetchProduct = async () => {
         try {
           const response = await fetch(
-            `http://localhost:3001/api/products/${id}`,
+            `https://e-commerce-bot-1.onrender.com/api/products/${id}`,
             {
               headers: { "Content-Type": "application/json" },
               cache: "no-store",

@@ -40,10 +40,13 @@ const ProductStorePage: React.FC = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch("http://localhost:3001/api/products", {
-          headers: { "Content-Type": "application/json" },
-          cache: "no-store", // Prevent stale data
-        });
+        const response = await fetch(
+          "https://e-commerce-bot-1.onrender.com/api/products",
+          {
+            headers: { "Content-Type": "application/json" },
+            cache: "no-store", // Prevent stale data
+          }
+        );
         if (!response.ok) {
           throw new Error(`Failed to fetch products: ${response.statusText}`);
         }
