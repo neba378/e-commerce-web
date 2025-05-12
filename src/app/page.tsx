@@ -171,7 +171,10 @@ const ProductStorePage: React.FC = () => {
                     {product.name}
                   </h3>
                   <p className="text-indigo-600 font-bold mt-1">
-                    Br {product.price.toFixed(2)}
+                    Br{" "}
+                    {typeof product.price === "number"
+                      ? product.price.toFixed(2)
+                      : product.price}
                   </p>
                   {product.shortDescription && (
                     <p className="text-gray-600 text-sm mt-2 line-clamp-2">

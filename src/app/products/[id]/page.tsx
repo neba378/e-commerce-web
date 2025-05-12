@@ -186,7 +186,10 @@ const ProductDetailPage = () => {
                   {product.shortDescription}
                 </p>
                 <p className="text-2xl font-semibold text-indigo-600 mb-4">
-                  Br {product.price.toFixed(2)}
+                  Br{" "}
+                  {typeof product.price === "number"
+                    ? product.price.toFixed(2)
+                    : product.price}
                 </p>
                 <div className="space-y-2">
                   <p className="text-gray-600">
